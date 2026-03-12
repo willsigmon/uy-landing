@@ -1,19 +1,27 @@
 import { Hero } from "@/components/hero";
 import { LinkSection } from "@/components/link-section";
 import { LinkCard } from "@/components/link-card";
-import { SubscribeForm } from "@/components/subscribe-form";
 import { ContactForm } from "@/components/contact-form";
 import { StorySection } from "@/components/story-section";
+import { SubscribeBanner } from "@/components/subscribe-banner";
 import { Footer } from "@/components/footer";
+
+const SUBSCRIBE_URL =
+  "https://docs.google.com/forms/d/e/1FAIpQLSeN2iwnRxln-1J6yIbN3_wlYqg133j2ITOige94Yw24e2bYsA/viewform";
 
 export default function Home() {
   return (
-    <div className="relative z-10 mx-auto flex min-h-screen max-w-lg flex-col gap-8 px-4 pb-8">
+    <div className="relative z-10 mx-auto flex min-h-screen max-w-lg flex-col gap-8 px-4 pb-20 sm:pb-8">
       <Hero />
 
       {/* Read the Magazine */}
       <LinkSection icon="📖" title="Read the Magazine">
-        <SubscribeForm />
+        <LinkCard
+          icon="📬"
+          label="Subscribe FREE"
+          description="Get every issue delivered — it's free!"
+          href={SUBSCRIBE_URL}
+        />
         <LinkCard
           icon="📱"
           label="Read Current Issue"
@@ -115,6 +123,7 @@ export default function Home() {
       </section>
 
       <Footer />
+      <SubscribeBanner />
     </div>
   );
 }
