@@ -2,8 +2,8 @@ import { Hero } from "@/components/hero";
 import { LinkSection } from "@/components/link-section";
 import { LinkCard } from "@/components/link-card";
 import { ContactForm } from "@/components/contact-form";
-import { StorySection } from "@/components/story-section";
 import { SubscribeBanner } from "@/components/subscribe-banner";
+import { QrSlideout } from "@/components/qr-slideout";
 import { Footer } from "@/components/footer";
 
 const SUBSCRIBE_URL =
@@ -36,12 +36,14 @@ export default function Home() {
         />
       </LinkSection>
 
-      {/* Share Your Story */}
-      <LinkSection icon="⭐" title="Share Your Story">
-        <p className="text-sm text-muted-foreground">
-          Know someone amazing? Nominate them for a feature in an upcoming issue.
-        </p>
-        <StorySection />
+      {/* Know Someone? */}
+      <LinkSection icon="⭐" title="Know Someone Amazing?">
+        <LinkCard
+          icon="✨"
+          label="Nominate a Story or Refer a Business"
+          description="Shining Bright, Abilities in Action, Nonprofit Spotlight, and more"
+          href="https://uyraleighmetro.vercel.app/refer"
+        />
       </LinkSection>
 
       {/* For Businesses */}
@@ -124,6 +126,7 @@ export default function Home() {
 
       <Footer />
       <SubscribeBanner />
+      <QrSlideout />
     </div>
   );
 }
