@@ -3,10 +3,11 @@
 import { useState, type FormEvent } from "react";
 
 const CATEGORIES = [
-  { value: "shining-bright", label: "Shining Bright", description: "Individual feature" },
-  { value: "abilities-in-action", label: "Abilities in Action", description: "Achievement story" },
+  { value: "shining-bright", label: "Shining Bright", description: "Individual feature story" },
+  { value: "abilities-in-action", label: "Abilities in Action", description: "Achievement or milestone" },
   { value: "parent-perspectives", label: "Parent Perspectives", description: "Family story" },
-  { value: "making-a-difference", label: "Making a Difference", description: "Nonprofit/org spotlight" },
+  { value: "making-a-difference", label: "Making a Difference", description: "Community impact story" },
+  { value: "nonprofit-spotlight", label: "Nonprofit Spotlight", description: "Organization making a difference" },
 ];
 
 export function NominationForm() {

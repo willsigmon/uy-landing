@@ -23,13 +23,16 @@ export default function Home() {
         <LinkCard
           icon="📚"
           label="Past Issues"
-          description="Archive"
+          description="Issue archive"
           comingSoon
         />
       </LinkSection>
 
       {/* Share Your Story */}
       <LinkSection icon="⭐" title="Share Your Story">
+        <p className="text-sm text-muted-foreground">
+          Know someone amazing? Nominate them for a feature in an upcoming issue.
+        </p>
         <StorySection />
       </LinkSection>
 
@@ -49,13 +52,13 @@ export default function Home() {
         <LinkCard
           icon="📘"
           label="Facebook"
-          description="Follow us"
+          description="Uniquely You! Raleigh Metro"
           comingSoon
         />
         <LinkCard
           icon="📸"
           label="Instagram"
-          description="@uniquelyyou.raleighmetro"
+          description="@uniquelyyouraleigh"
           comingSoon
         />
         <LinkCard
@@ -64,28 +67,49 @@ export default function Home() {
           description="will.sigmon@n2co.com"
           href="mailto:will.sigmon@n2co.com"
         />
+        <LinkCard
+          icon="🌐"
+          label="Uniquely You! National"
+          description="uniquelyyoumag.com"
+          href="https://www.uniquelyyoumag.com"
+        />
       </LinkSection>
 
       {/* About */}
       <section className="glass-surface p-6">
         <h2 className="mb-3 font-display text-lg tracking-tight text-foreground">
-          About
+          About Uniquely You!
         </h2>
         <div className="flex flex-col gap-3 text-sm leading-relaxed text-muted-foreground">
           <p>
             <strong className="text-foreground">Uniquely You!</strong> is a free
             monthly publication celebrating the disability community across NC&apos;s
-            Triangle region.
+            Triangle region — Wake, Durham, Orange, Johnston, and Chatham counties.
           </p>
           <p>
-            We connect families, advocates, and service providers with the
-            businesses that serve them — across Wake, Durham, Orange, Johnston,
-            and Chatham counties.
+            Every issue features inspiring stories through our signature columns:
+            {" "}<strong className="text-foreground">Shining Bright</strong> individual features,
+            {" "}<strong className="text-foreground">Abilities in Action</strong> achievements,
+            {" "}<strong className="text-foreground">Parent Perspectives</strong> family stories,
+            and <strong className="text-foreground">Nonprofit Spotlights</strong> highlighting
+            organizations making a difference.
           </p>
           <p>
-            Every issue features inspiring stories, community spotlights, and
-            local resources. Our advertisers are hand-selected businesses that
-            genuinely serve and support this community.
+            We connect families, advocates, and service providers with
+            hand-selected local businesses that genuinely serve and support this
+            community.
+          </p>
+          <p className="pt-1 text-xs text-muted-foreground/70">
+            Uniquely You! is a publication of{" "}
+            <a
+              href="https://n2co.com/salute-and-uniquely-you/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-border hover:text-foreground"
+            >
+              The N2 Company
+            </a>
+            , with editions serving communities across the country.
           </p>
         </div>
       </section>
