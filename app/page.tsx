@@ -46,6 +46,16 @@ export default function Home() {
         />
       </LinkSection>
 
+      {/* Resources */}
+      <LinkSection icon="📋" title="Resources">
+        <LinkCard
+          icon="🗺️"
+          label="Triangle Disability Resources"
+          description="Local services, programs, and organizations across 5 counties"
+          href="/resources"
+        />
+      </LinkSection>
+
       {/* For Businesses */}
       <LinkSection icon="📢" title="For Businesses">
         <ContactForm />
