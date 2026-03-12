@@ -16,7 +16,7 @@ export function Hero() {
       </div>
 
       <p className="max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
-        Celebrating the disability community in the Triangle
+        Celebrating the disability community in the Triangle and surrounding areas
       </p>
 
       <a
