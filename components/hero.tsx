@@ -5,17 +5,17 @@ const COUNTIES = ["Wake", "Durham", "Orange", "Johnston", "Chatham"];
 
 export function Hero() {
   return (
-    <section className="relative z-10 flex flex-col items-center gap-6 px-4 pt-16 pb-10 text-center sm:pt-24 sm:pb-14">
-      <div className="flex flex-col items-center gap-2">
+    <section className="relative z-10 flex flex-col items-center gap-4 px-4 pt-14 pb-8 text-center sm:pt-20 sm:pb-10">
+      <div className="flex flex-col items-center gap-1">
         <h1 className="font-display text-brand-gradient text-5xl leading-tight sm:text-7xl">
           Uniquely You!
         </h1>
-        <p className="font-display text-xl tracking-tight text-foreground/80 sm:text-2xl">
+        <p className="font-display text-2xl tracking-tight text-foreground sm:text-3xl">
           Raleigh Metro
         </p>
       </div>
 
-      <p className="max-w-md text-lg leading-relaxed text-muted-foreground sm:text-xl">
+      <p className="max-w-md text-base leading-relaxed text-muted-foreground sm:text-lg">
         Celebrating the disability community in the Triangle
       </p>
 
@@ -46,7 +46,7 @@ export function Hero() {
         ))}
       </div>
 
-      <p className="mt-2 text-sm text-muted-foreground">
+      <p className="text-sm text-muted-foreground">
         A free monthly magazine by{" "}
         <span className="font-semibold text-foreground">N2 Company</span>
       </p>
