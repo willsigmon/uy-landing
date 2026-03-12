@@ -61,8 +61,8 @@ export default function Home() {
         <LinkCard
           icon="✉️"
           label="Email Will"
-          description="wsigmon@n2co.com"
-          href="mailto:wsigmon@n2co.com"
+          description="will.sigmon@n2co.com"
+          href="mailto:will.sigmon@n2co.com"
         />
       </LinkSection>
 

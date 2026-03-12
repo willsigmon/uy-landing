@@ -105,8 +105,8 @@ export async function POST(request: Request) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify({
-          from: "Uniquely You! <noreply@updates.uniquelyyouraleighmetro.com>",
-          to: process.env.NOTIFY_EMAIL ?? "wsigmon@n2co.com",
+          from: "Uniquely You! <noreply@updates.uyrdu.com>",
+          to: process.env.NOTIFY_EMAIL ?? "will.sigmon@n2co.com",
           subject: `[UY Raleigh Metro] ${subject}`,
           text: body,
         }),
