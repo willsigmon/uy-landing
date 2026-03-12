@@ -43,7 +43,7 @@ export default function Home() {
           icon="📅"
           label="Schedule a Meeting"
           description="Book a time with Will"
-          comingSoon
+          href="https://calendar.app.google/oTFXRmKDFUDPcvmj6"
         />
       </LinkSection>
 
