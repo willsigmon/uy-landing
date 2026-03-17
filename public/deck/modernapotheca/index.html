@@ -1505,6 +1505,32 @@ h1, h2, h3, h4 {
   text-align: center;
   font-size: 0.95rem;
 }
+.s10-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.s10-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal), #53E8BF);
+  color: var(--dark);
+  text-decoration: none;
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 36px rgba(18,214,160,0.18);
+}
+.s10-cta-sub {
+  color: rgba(255,247,241,0.68);
+  font-size: 0.9rem;
+  text-align: center;
+}
 
 /* ================================================================
    SECTION TITLES
@@ -2156,13 +2182,13 @@ h1, h2, h3, h4 {
   <div class="slide-inner" style="display:flex;flex-direction:column;height:calc(100vh - 120px);justify-content:space-between;">
     <div>
       <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Questions</div>
-      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">What questions do you have?</h2>
-      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:760px;margin-bottom:0;">Answer fit, timing, and creative questions here. If a current issue would help, this is the clean moment to open it and return for pricing.</p>
+      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Questions and live issue example</h2>
+      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:760px;margin-bottom:0;">Open questions around fit, timing, and creative can be answered here. A current issue example makes the format and placement options clearer before pricing.</p>
     </div>
 
     <div class="s8-prompt-grid" style="flex:1;align-items:center;">
       <div class="s8-question-card" data-reveal="left" data-delay="260">
-        <div class="s8-card-label">Questions to surface now</div>
+        <div class="s8-card-label">Questions to answer together</div>
         <ul class="s8-prompt-list">
           <li class="s8-prompt-item"><span class="s8-prompt-dot">1</span><span>Which audience segment matters most right now?</span></li>
           <li class="s8-prompt-item"><span class="s8-prompt-dot">2</span><span>What kind of placement feels most natural: brand story, offer, or resource-led education?</span></li>
@@ -2172,22 +2198,21 @@ h1, h2, h3, h4 {
       </div>
 
       <div class="s8-preview-card" data-reveal="right" data-delay="340">
-        <div class="s8-card-label">Current issue preview</div>
+        <div class="s8-card-label">Current issue example</div>
         <div class="s8-preview-shell">
           <div class="s8-preview-mag">
-            <div class="s8-preview-kicker">Free monthly publication</div>
-            <div class="s8-preview-mark">UY!</div>
-            <div class="s8-preview-title">Real local stories.<br>Real local partners.</div>
-            <div class="s8-preview-copy">Use one live issue to ground tone, layout, and placement quality before pricing.</div>
-            <div class="s8-preview-stripes"><span></span><span></span><span></span></div>
+            <div class="s8-preview-kicker">One real issue</div>
+            <div class="s8-preview-title">Format, tone, and placement in context</div>
+            <div class="s8-preview-copy">A current issue makes the publication easier to understand before pricing comes into view.</div>
+            <div class="s8-preview-copy" style="margin-top:12px;">Cover, one feature spread, and one advertiser placement usually provide enough context.</div>
           </div>
         </div>
-        <p class="s8-preview-note">Open a current issue, show one placement example, then return here for rate-card pricing.</p>
+        <p class="s8-preview-note">Pricing and next steps follow on the next slides.</p>
       </div>
     </div>
 
     <div class="s8-cta-wrap" data-reveal="scale" data-delay="420" style="margin-top:18px;">
-      <p class="s8-cta-text">Current issue preview first. Rate-card pricing next.</p>
+      <p class="s8-cta-text">Current issue example before pricing.</p>
     </div>
   </div>
 
@@ -2271,35 +2296,39 @@ h1, h2, h3, h4 {
 
   <div class="slide-inner" style="display:flex;flex-direction:column;height:calc(100vh - 120px);justify-content:space-between;">
     <div>
-      <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Closing step</div>
-      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Based on what was discussed, which ad size makes sense?</h2>
-      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:840px;margin-bottom:0;">If the answer is clear today, handle authorization now. If another decision-maker needs to weigh in, bring that person into the next live conversation.</p>
+      <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Decision path</div>
+      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Decision and launch path</h2>
+      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:840px;margin-bottom:0;">If the fit is right, the issue count, billing contact, and launch timing can be confirmed here. If more approval is needed, the next conversation can be scheduled before leaving the room.</p>
     </div>
 
     <div class="s10-grid" style="flex:1;align-items:center;">
       <div class="s10-card" data-reveal="left" data-delay="260">
-        <div class="s10-card-label">If ready today</div>
+        <div class="s10-card-label">If approved today</div>
         <ul class="s10-list">
-          <li class="s10-item"><span class="s10-num">1</span><span>Choose 6, 12, or 36 issues</span></li>
-          <li class="s10-item"><span class="s10-num">2</span><span>Confirm billing name, email, and best payment contact</span></li>
-          <li class="s10-item"><span class="s10-num">3</span><span>Complete credit card authorization while this slide stays open</span></li>
-          <li class="s10-item"><span class="s10-num">4</span><span>Lock the target issue and creative kickoff timing</span></li>
+          <li class="s10-item"><span class="s10-num">1</span><span>Selected issue count: 6, 12, or 36 issues</span></li>
+          <li class="s10-item"><span class="s10-num">2</span><span>Billing contact and payment details confirmed</span></li>
+          <li class="s10-item"><span class="s10-num">3</span><span>Card authorization completed</span></li>
+          <li class="s10-item"><span class="s10-num">4</span><span>Target issue and creative kickoff timing confirmed</span></li>
         </ul>
       </div>
 
       <div class="s10-card" data-reveal="right" data-delay="340">
-        <div class="s10-card-label">If another decision-maker is involved</div>
+        <div class="s10-card-label">If additional approval is needed</div>
         <ul class="s10-list">
-          <li class="s10-item"><span class="s10-num">1</span><span>Identify who else needs to approve the decision</span></li>
-          <li class="s10-item"><span class="s10-num">2</span><span>Set the next call while everyone is still together</span></li>
-          <li class="s10-item"><span class="s10-num">3</span><span>Bring the same pricing and placement options back to that live conversation</span></li>
-          <li class="s10-item"><span class="s10-num">4</span><span>Move straight from approval into creative kickoff</span></li>
+          <li class="s10-item"><span class="s10-num">1</span><span>Additional decision-maker identified</span></li>
+          <li class="s10-item"><span class="s10-num">2</span><span>Follow-up meeting set before leaving</span></li>
+          <li class="s10-item"><span class="s10-num">3</span><span>Same pricing and placement options carried forward</span></li>
+          <li class="s10-item"><span class="s10-num">4</span><span>Creative kickoff begins after approval</span></li>
         </ul>
       </div>
     </div>
 
-    <div class="s10-note" data-reveal="scale" data-delay="420">The rate card stays consistent. The decision is ad size, timing, and fit.</div>
-    <div class="s10-contact" data-reveal="fade" data-delay="480">Will Sigmon · Area Director · will.sigmon@n2co.com</div>
+    <div class="s10-note" data-reveal="scale" data-delay="420">The deck keeps pricing, approval, and launch timing in one place.</div>
+    <div class="s10-cta-wrap" data-reveal="scale" data-delay="460">
+      <a class="s10-cta" href="https://compass.n2pub.com/login" target="_blank" rel="noopener">Ready to get started?</a>
+      <div class="s10-cta-sub">Opens Compass Portal authorization</div>
+    </div>
+    <div class="s10-contact" data-reveal="fade" data-delay="500">Will Sigmon · Area Director · will.sigmon@n2co.com</div>
   </div>
 
   <div class="s8-rainbow"></div>

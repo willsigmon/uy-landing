@@ -171,13 +171,7 @@ h1, h2, h3, h4 {
 
 /* Paper grain texture overlay */
 .slide::after {
-  content: '';
-  position: absolute; inset: -50%;
-  width: 200%; height: 200%;
-  /* Paper grain disabled for performance — re-enable for production:
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='g'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='1.2' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23g)'/%3E%3C/svg%3E"); */
-  opacity: 0.04; pointer-events: none; z-index: 3;
-  mix-blend-mode: multiply;
+  display: none;
 }
 
 /* ================================================================
@@ -188,7 +182,32 @@ h1, h2, h3, h4 {
   border-radius: 50%;
   pointer-events: none;
   z-index: 1;
-  filter: blur(80px);
+  filter: blur(56px);
+  animation: none !important;
+}
+
+/* Presentation stability overrides */
+.float-shape,
+.rainbow-bar,
+.cover-gradient-strip,
+.s8-rainbow,
+.s8-preview-stripes span {
+  animation: none !important;
+}
+
+.cover-aside,
+.s4-context-card,
+.s5-fit-panel,
+.s5-fit-badge,
+.s6-panel,
+.s6-hub,
+.s7-step,
+.s8-question-card,
+.s8-preview-card,
+.s9-plan,
+.s10-card {
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
 }
 
 /* ================================================================
@@ -1910,6 +1929,32 @@ h1, h2, h3, h4 {
   text-align: center;
   font-size: 0.95rem;
 }
+.s10-cta-wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-top: 18px;
+}
+.s10-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 28px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--teal), #53E8BF);
+  color: var(--dark);
+  text-decoration: none;
+  font-family: var(--display);
+  font-size: 1rem;
+  letter-spacing: 0.01em;
+  box-shadow: 0 18px 36px rgba(18,214,160,0.18);
+}
+.s10-cta-sub {
+  color: rgba(255,247,241,0.68);
+  font-size: 0.9rem;
+  text-align: center;
+}
 
 /* ================================================================
    SECTION TITLES
@@ -2042,7 +2087,7 @@ h1, h2, h3, h4 {
   <a href="#what" data-slide="2" data-label="What SRIS Does" aria-label="What SRIS Does"></a>
   <a href="#credibility" data-slide="3" data-label="Amplify" aria-label="Amplify"></a>
   <a href="#audience" data-slide="4" data-label="Audience Fit" aria-label="Audience Fit"></a>
-  <a href="#geography" data-slide="5" data-label="Local Fit" aria-label="Local Fit"></a>
+  <a href="#geography" data-slide="5" data-label="Editorial Fit" aria-label="Editorial Fit"></a>
   <a href="#partnership" data-slide="6" data-label="Pilot Plan" aria-label="Pilot Plan"></a>
   <a href="#questions" data-slide="7" data-label="Questions" aria-label="Questions"></a>
   <a href="#pricing" data-slide="8" data-label="Pricing" aria-label="Pricing"></a>
@@ -2099,6 +2144,10 @@ h1, h2, h3, h4 {
           <span class="line-cross" data-reveal="fade" data-delay="500">- - - conversation with - - -</span>
           <span class="line-uy" data-reveal="up" data-delay="600">Uniquely You!</span>
         </h1>
+
+        <p data-reveal="up" data-delay="420" style="max-width:760px;font-size:1rem;line-height:1.55;color:rgba(255,255,255,0.82);margin-top:6px;">
+          <strong>SRIS stands for Specialized Recreation and Inclusion Services</strong> — Raleigh Parks programs, accommodations, and supports that help participants with disabilities take part more fully.
+        </p>
 
         <!-- Subtitle with text reveal -->
         <p class="cover-subtitle">
@@ -2462,49 +2511,50 @@ h1, h2, h3, h4 {
      ============================================================ -->
 <section class="slide slide--cream" id="geography" data-slide-index="5" data-theme="light">
   <div class="slide-inner">
-    <div class="section-eyebrow" data-reveal="up" data-delay="0">Local Fit</div>
-    <h2 class="section-title" data-reveal="up" data-delay="100">The local fit is already there</h2>
-    <p class="section-subtitle" data-reveal="up" data-delay="200">Same families, same county, same decision window.</p>
+    <div class="section-eyebrow" data-reveal="up" data-delay="0">Editorial fit</div>
+    <h2 class="section-title" data-reveal="up" data-delay="100">What families could actually see</h2>
+    <p class="section-subtitle" data-reveal="up" data-delay="200">Concrete content examples that make SRIS clearer, more human, and easier to act on.</p>
 
     <div class="s6-fit-layout">
       <article class="s6-panel s6-panel--left" data-reveal="left" data-delay="300">
-        <div class="s6-panel-kicker">UY distribution footprint</div>
-        <h3 class="s6-panel-title">Uniquely You! Raleigh Metro</h3>
+        <div class="s6-panel-kicker">Recurring resource placement</div>
+        <h3 class="s6-panel-title">Simple monthly utility</h3>
         <div class="s6-chip-grid">
-          <span class="s6-chip">Wake</span>
-          <span class="s6-chip">Durham</span>
-          <span class="s6-chip">Orange</span>
-          <span class="s6-chip">Johnston</span>
-          <span class="s6-chip">Chatham</span>
+          <span class="s6-chip">Programs</span>
+          <span class="s6-chip">Registration</span>
+          <span class="s6-chip">Accommodations</span>
+          <span class="s6-chip">Sensory resources</span>
+          <span class="s6-chip">Camp dates</span>
+          <span class="s6-chip">Contact info</span>
         </div>
-        <p class="s6-summary">Free monthly disability-community publishing that keeps Wake and surrounding counties connected to local resources, people, and recurring trust signals.</p>
+        <p class="s6-summary">A recurring resource block can keep the most useful entry points visible issue after issue, especially for families who are just learning what SRIS offers.</p>
       </article>
 
       <div class="s6-hub-wrap" data-reveal="scale" data-delay="420">
         <div class="s6-hub">
-          <div class="s6-hub-kicker">Shared center</div>
-          <div class="s6-hub-title">Wake County</div>
-          <p class="s6-hub-copy">Same families. Same needs. Same decision window.</p>
+          <div class="s6-hub-kicker">Shared goal</div>
+          <div class="s6-hub-title">Clear next steps</div>
+          <p class="s6-hub-copy">Help a family understand what SRIS is, what it offers, and what to do next.</p>
         </div>
       </div>
 
       <article class="s6-panel s6-panel--right" data-reveal="right" data-delay="540">
-        <div class="s6-panel-kicker">SRIS presence</div>
-        <h3 class="s6-panel-title">Raleigh Parks SRIS</h3>
+        <div class="s6-panel-kicker">Feature story angles</div>
+        <h3 class="s6-panel-title">Stories that feel like service</h3>
         <div class="s6-chip-grid">
-          <span class="s6-chip">Raleigh</span>
-          <span class="s6-chip">Wake families</span>
-          <span class="s6-chip">Specialized rec</span>
-          <span class="s6-chip">Inclusion</span>
-          <span class="s6-chip">Sensory supports</span>
-          <span class="s6-chip">Summer camps</span>
+          <span class="s6-chip">Quest</span>
+          <span class="s6-chip">Camp Friendly</span>
+          <span class="s6-chip">Camp Exploration</span>
+          <span class="s6-chip">Inclusion supports</span>
+          <span class="s6-chip">Participant wins</span>
+          <span class="s6-chip">Staff expertise</span>
         </div>
-        <p class="s6-summary">City-backed programs and inclusion supports rooted in the same community where families are already looking for trusted information and clear next steps.</p>
+        <p class="s6-summary">Feature stories and plain-language explainers can spotlight real programs without making the partnership feel like a generic ad campaign.</p>
       </article>
     </div>
 
     <div class="s6-callout" data-reveal="up" data-delay="500">
-      <strong>Wake County is the center of both conversations.</strong> UY! can help Raleigh Parks reach families before they scroll past a registration window or miss a support option they would have used.
+      <strong>The strongest partnership angle is practical clarity.</strong> Families remember stories, service explainers, and clear next steps better than a generic promotional message.
     </div>
   </div>
 </section>
@@ -2610,13 +2660,13 @@ h1, h2, h3, h4 {
   <div class="slide-inner" style="display:flex;flex-direction:column;height:calc(100vh - 120px);justify-content:space-between;">
     <div>
       <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Questions</div>
-      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">What questions do you have?</h2>
-      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:820px;margin-bottom:0;">Answer fit, timing, and city-process questions here. If a current issue would help, this is the clean moment to open it and return for pricing.</p>
+      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Questions and live issue example</h2>
+      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:820px;margin-bottom:0;">Open questions around fit, timing, and internal process can be answered here. A current issue example makes the format and placement options clearer before pricing.</p>
     </div>
 
     <div class="s8-prompt-grid" style="flex:1;align-items:center;">
       <div class="s8-question-card" data-reveal="left" data-delay="260">
-        <div class="s8-card-label">Questions to surface now</div>
+        <div class="s8-card-label">Questions to answer together</div>
         <ul class="s8-prompt-list">
           <li class="s8-prompt-item"><span class="s8-prompt-dot">1</span><span>Which program or service should lead first?</span></li>
           <li class="s8-prompt-item"><span class="s8-prompt-dot">2</span><span>Which registration, accommodation, or sensory-resource links matter most?</span></li>
@@ -2626,22 +2676,21 @@ h1, h2, h3, h4 {
       </div>
 
       <div class="s8-preview-card" data-reveal="right" data-delay="340">
-        <div class="s8-card-label">Current issue preview</div>
+        <div class="s8-card-label">Current issue example</div>
         <div class="s8-preview-shell">
           <div class="s8-preview-mag">
-            <div class="s8-preview-kicker">Free monthly publication</div>
-            <div class="s8-preview-mark">UY!</div>
-            <div class="s8-preview-title">Local disability-community publishing that families actually keep.</div>
-            <div class="s8-preview-copy">Use one live issue to ground tone, accessibility, and placement style before pricing.</div>
-            <div class="s8-preview-stripes"><span></span><span></span><span></span></div>
+            <div class="s8-preview-kicker">One real issue</div>
+            <div class="s8-preview-title">Format, tone, and accessibility in context</div>
+            <div class="s8-preview-copy">A current issue makes the publication style, readability, and placement options easier to understand before pricing.</div>
+            <div class="s8-preview-copy" style="margin-top:12px;">Cover, one feature spread, and one advertiser placement usually provide enough context.</div>
           </div>
         </div>
-        <p class="s8-preview-note">Open a current issue, show one placement example, then return here for rate-card pricing.</p>
+        <p class="s8-preview-note">Pricing and next steps follow on the next slides.</p>
       </div>
     </div>
 
     <div class="s8-cta-wrap" data-reveal="scale" data-delay="420" style="margin-top:18px;">
-      <p class="s8-cta-text">Current issue preview first. Rate-card pricing next.</p>
+      <p class="s8-cta-text">Current issue example before pricing.</p>
     </div>
   </div>
 
@@ -2725,35 +2774,39 @@ h1, h2, h3, h4 {
 
   <div class="slide-inner" style="display:flex;flex-direction:column;height:calc(100vh - 120px);justify-content:space-between;">
     <div>
-      <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Closing step</div>
-      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Based on what was discussed, which ad size makes sense?</h2>
-      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:900px;margin-bottom:0;">If the right scope is clear today, keep momentum and handle the authorization path now. If another approver or purchasing contact needs to join, bring that person into the next live conversation.</p>
+      <div class="section-eyebrow" data-reveal="up" data-delay="50" style="color:rgba(255,247,241,0.58);">Decision path</div>
+      <h2 class="s8-title" data-reveal="up" data-delay="100" style="margin-bottom:14px;">Decision and approval path</h2>
+      <p class="section-subtitle" data-reveal="up" data-delay="180" style="color:rgba(255,247,241,0.74);max-width:900px;margin-bottom:0;">If the scope feels right, pricing and the approval path can be confirmed here. If purchasing or leadership review is required, the next conversation can be scheduled before leaving the room.</p>
     </div>
 
     <div class="s10-grid" style="flex:1;align-items:center;">
       <div class="s10-card" data-reveal="left" data-delay="260">
-        <div class="s10-card-label">If city can move today</div>
+        <div class="s10-card-label">If approved to move forward</div>
         <ul class="s10-list">
-          <li class="s10-item"><span class="s10-num">1</span><span>Choose the pilot length: 6, 12, or 36 issues</span></li>
-          <li class="s10-item"><span class="s10-num">2</span><span>Confirm billing or purchasing contact details</span></li>
-          <li class="s10-item"><span class="s10-num">3</span><span>Complete credit card authorization if city payment rules allow</span></li>
-          <li class="s10-item"><span class="s10-num">4</span><span>Lock the first issue and creative brief timing</span></li>
+          <li class="s10-item"><span class="s10-num">1</span><span>Selected scope: 6, 12, or 36 issues</span></li>
+          <li class="s10-item"><span class="s10-num">2</span><span>Billing or purchasing contact confirmed</span></li>
+          <li class="s10-item"><span class="s10-num">3</span><span>Card or invoice path confirmed</span></li>
+          <li class="s10-item"><span class="s10-num">4</span><span>First issue and creative brief timing confirmed</span></li>
         </ul>
       </div>
 
       <div class="s10-card" data-reveal="right" data-delay="340">
-        <div class="s10-card-label">If another approver is needed</div>
+        <div class="s10-card-label">If additional approval is needed</div>
         <ul class="s10-list">
-          <li class="s10-item"><span class="s10-num">1</span><span>Identify the supervisor or purchasing contact who needs to approve</span></li>
-          <li class="s10-item"><span class="s10-num">2</span><span>Set the next call with that person included</span></li>
-          <li class="s10-item"><span class="s10-num">3</span><span>Carry the same selected scope into that live conversation</span></li>
-          <li class="s10-item"><span class="s10-num">4</span><span>Move straight into creative planning once approved</span></li>
+          <li class="s10-item"><span class="s10-num">1</span><span>Supervisor or purchasing approver identified</span></li>
+          <li class="s10-item"><span class="s10-num">2</span><span>Follow-up meeting set with that contact included</span></li>
+          <li class="s10-item"><span class="s10-num">3</span><span>Same selected scope carried into that conversation</span></li>
+          <li class="s10-item"><span class="s10-num">4</span><span>Creative planning begins after approval</span></li>
         </ul>
       </div>
     </div>
 
-    <div class="s10-note" data-reveal="scale" data-delay="420">The rate card stays consistent. The decision is scope, timing, and approval path.</div>
-    <div class="s10-contact" data-reveal="fade" data-delay="480">Will Sigmon · Area Director · will.sigmon@n2co.com</div>
+    <div class="s10-note" data-reveal="scale" data-delay="420">The deck keeps pricing, approval path, and launch timing in one place.</div>
+    <div class="s10-cta-wrap" data-reveal="scale" data-delay="460">
+      <a class="s10-cta" href="https://compass.n2pub.com/login" target="_blank" rel="noopener">Ready to get started?</a>
+      <div class="s10-cta-sub">Opens Compass Portal authorization</div>
+    </div>
+    <div class="s10-contact" data-reveal="fade" data-delay="500">Will Sigmon · Area Director · will.sigmon@n2co.com</div>
   </div>
 
   <div class="s8-rainbow"></div>
@@ -2977,27 +3030,7 @@ h1, h2, h3, h4 {
     }
   }
 
-  // ================================================================
-  // PARALLAX on orbs (desktop only)
-  // ================================================================
-  if (!matchMedia('(pointer: coarse)').matches) {
-    var allOrbs = document.querySelectorAll('.orb');
-    var ticking = false;
-
-    window.addEventListener('scroll', function() {
-      if (!ticking) {
-        requestAnimationFrame(function() {
-          var scrollY = window.scrollY;
-          allOrbs.forEach(function(orb, i) {
-            var speed = 0.02 + (i % 4) * 0.015;
-            orb.style.transform = 'translateY(' + (scrollY * speed) + 'px)';
-          });
-          ticking = false;
-        });
-        ticking = true;
-      }
-    });
-  }
+  // Presentation stability: parallax disabled to avoid blurred-element artifacting.
 
 })();
 </script>
