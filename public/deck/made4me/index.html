@@ -2132,23 +2132,19 @@ h1, h2, h3, h4 {
    ================================================================ */
 @media (max-height: 820px) {
   #pricing.slide,
-  #questions.slide,
   #start.slide {
     padding-top: 40px;
     padding-bottom: 40px;
   }
   #pricing .slide-inner,
-  #questions .slide-inner,
   #start .slide-inner {
     gap: 14px;
   }
   #pricing .section-title,
-  #questions .s8-title,
   #start .s8-title {
     font-size: clamp(2.15rem, 3vw, 2.45rem);
   }
   #pricing .section-subtitle,
-  #questions .section-subtitle,
   #start .section-subtitle {
     font-size: 1rem;
     line-height: 1.48;
@@ -2189,29 +2185,15 @@ h1, h2, h3, h4 {
     font-size: 0.8rem;
     margin-bottom: 3px;
   }
-  #questions .s8-question-card,
-  #questions .s8-preview-card,
   #start .s10-card {
     padding: 20px;
   }
-  #questions .s8-prompt-list,
   #start .s10-list {
     gap: 10px;
   }
-  #questions .s8-prompt-item,
   #start .s10-item {
     font-size: 0.92rem;
     line-height: 1.45;
-  }
-  #questions .s8-preview-shell {
-    max-width: 210px;
-    margin-bottom: 12px;
-  }
-  #questions .s8-preview-title {
-    font-size: 1.18rem;
-  }
-  #questions .s8-preview-copy {
-    font-size: 0.86rem;
   }
   #start .s10-note {
     margin-top: 10px;
@@ -2236,12 +2218,10 @@ h1, h2, h3, h4 {
 
 @media (max-height: 760px) {
   #pricing .slide-inner,
-  #questions .slide-inner,
   #start .slide-inner {
     justify-content: flex-start !important;
   }
   #pricing .section-eyebrow,
-  #questions .section-eyebrow,
   #start .section-eyebrow {
     margin-bottom: 8px;
   }
@@ -2297,9 +2277,9 @@ h1, h2, h3, h4 {
   .s6-hub { border-radius: 28px; min-height: auto; width: 100%; max-width: 320px; }
   .s6-legend { flex-direction: column; align-items: center; gap: 12px; }
   .s7-step { min-height: auto; }
-  .s8-question-card, .s8-preview-card, .s10-card { padding: 24px 22px; }
+  .s10-card { padding: 24px 22px; }
   .s9-plan--featured { transform: none; }
-  .s8-preview-shell { max-width: 240px; }
+  .pricing-notes { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 500px) {
