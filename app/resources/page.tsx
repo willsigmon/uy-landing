@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { ResourceBrowser } from "@/components/resource-browser";
 
 export const metadata: Metadata = {
   title: "Triangle Disability Resources | Uniquely You! Raleigh Metro",
@@ -203,44 +204,7 @@ export default function ResourcesPage() {
         </a>
       </div>
 
-      {CATEGORIES.map((category) => (
-        <section key={category.title} className="flex flex-col gap-3">
-          <h2 className="flex items-center gap-2 font-display text-lg tracking-tight text-foreground">
-            <span role="img" aria-hidden="true">
-              {category.icon}
-            </span>
-            {category.title}
-          </h2>
-          <div className="flex flex-col gap-2">
-            {category.resources.map((resource) => (
-              <div
-                key={resource.name}
-                className="rounded-2xl border-2 border-border bg-card p-4"
-              >
-                <div className="flex flex-col gap-1">
-                  {resource.url ? (
-                    <a
-                      href={resource.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="font-semibold text-foreground underline decoration-border hover:decoration-foreground"
-                    >
-                      {resource.name}
-                    </a>
-                  ) : (
-                    <p className="font-semibold text-foreground">
-                      {resource.name}
-                    </p>
-                  )}
-                  <p className="text-sm leading-relaxed text-muted-foreground">
-                    {resource.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </section>
-      ))}
+      <ResourceBrowser categories={CATEGORIES} />
 
       <div className="mt-4 flex flex-col items-center gap-4 border-t-2 border-border/50 pt-6 text-center">
         <p className="text-sm text-muted-foreground">
