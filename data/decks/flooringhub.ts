@@ -135,6 +135,34 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
 .float-shape { position: absolute; pointer-events: none; z-index: 1; opacity: 0.06; }
 @keyframes floatDrift { 0%, 100% { transform: translate(0, 0) rotate(0deg); } 25% { transform: translate(10px, -15px) rotate(5deg); } 50% { transform: translate(-5px, -25px) rotate(-3deg); } 75% { transform: translate(15px, -10px) rotate(7deg); } }
 
+/* FUN ANIMATIONS */
+@keyframes pulseGlow { 0%, 100% { box-shadow: 0 0 0 0 rgba(255,107,107,0.3); } 50% { box-shadow: 0 0 20px 4px rgba(255,107,107,0.15); } }
+@keyframes subtleBounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
+@keyframes gradientShift { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+@keyframes iconSpin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.uy-mark { animation: pulseGlow 3s ease-in-out infinite; }
+.cover-pillar-icon { transition: transform 0.4s var(--spring); }
+.cover-pillar:hover .cover-pillar-icon { transform: scale(1.15) rotate(-5deg); }
+.s3-pillar { transition: transform 0.35s var(--spring), box-shadow 0.35s ease; }
+.s3-pillar:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(44,11,90,0.1); }
+.s3-viz-mark { transition: transform 0.4s var(--spring); }
+.s3-viz:hover .s3-viz-mark { transform: scale(1.08); }
+.s7-step { transition: transform 0.35s var(--spring), box-shadow 0.35s ease; }
+.s7-step:hover { transform: translateY(-6px); box-shadow: 0 12px 32px rgba(44,11,90,0.12); }
+.s2-tl-dot { transition: transform 0.4s var(--spring), box-shadow 0.3s ease; }
+.s2-tl-item:hover .s2-tl-dot { transform: scale(1.15); box-shadow: 0 6px 24px rgba(0,0,0,0.12); }
+.s4-context-card { transition: transform 0.3s var(--spring); }
+.s4-context-card:hover { transform: translateY(-4px); }
+.pricing-card { transition: transform 0.3s var(--spring), box-shadow 0.3s ease; }
+.pricing-card:hover { transform: translateY(-3px); box-shadow: 0 6px 24px rgba(44,11,90,0.1); }
+.pricing-note { transition: transform 0.3s var(--spring); }
+.pricing-note:hover { transform: translateY(-3px); }
+.decision-step { transition: transform 0.3s var(--spring), background 0.3s ease; }
+.decision-step:hover { transform: translateY(-2px); background: rgba(255,255,255,0.08); }
+.s10-cta { animation: subtleBounce 2.5s ease-in-out infinite; }
+.s10-cta:hover { animation: none; }
+.cover-title .line-2 { background-size: 200% 200%; animation: gradientShift 4s ease infinite; background: linear-gradient(90deg, var(--teal), var(--gold), var(--teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+
 /* SECTION SHARED */
 .section-eyebrow { font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: var(--purple-sec); }
 .section-title { font-size: clamp(1.8rem, 3vw, 2.5rem); color: var(--dark); max-width: 700px; line-height: 1.15; }
@@ -248,7 +276,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
 }
 .pc-header:hover { background: rgba(44,11,90,0.02); }
 .pc-size { font-family: var(--display); font-size: 1.15rem; color: var(--dark); flex: 1; }
-.pc-range { font-family: var(--sans); font-size: 0.9rem; color: #999; font-weight: 500; }
+.pc-range { display: none; }
 .pc-arrow {
   width: 20px; height: 20px; color: var(--purple-sec); transition: transform 0.3s ease;
 }
@@ -320,33 +348,24 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
 .s10-cta-sub { font-size: 0.8rem; color: rgba(255,247,241,0.4); margin-top: 8px; }
 .s10-contact { text-align: center; font-size: 0.85rem; color: rgba(255,247,241,0.5); margin-top: 10px; }
 
-/* DECISION ACCORDION */
+/* DECISION STEPS (always open) */
 .decision-accordion { display: flex; flex-direction: column; gap: 0; margin-top: 16px; }
 .decision-step {
   background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); border-radius: 14px;
-  margin-bottom: 8px; overflow: hidden; transition: all 0.4s ease;
+  margin-bottom: 8px; overflow: hidden;
 }
 .decision-step-header {
-  display: flex; align-items: center; gap: 14px; padding: 16px 22px; cursor: pointer;
-  user-select: none; transition: background 0.3s ease;
+  display: flex; align-items: center; gap: 14px; padding: 16px 22px 6px;
 }
-.decision-step-header:hover { background: rgba(255,255,255,0.04); }
 .decision-step-num {
-  flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: rgba(255,255,255,0.08);
-  display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 0.85rem; color: var(--gold);
-  transition: background 0.3s ease, color 0.3s ease;
+  flex-shrink: 0; width: 32px; height: 32px; border-radius: 50%; background: var(--gold);
+  display: flex; align-items: center; justify-content: center; font-family: var(--display); font-size: 0.85rem; color: var(--dark);
 }
-.decision-step.open .decision-step-num { background: var(--gold); color: var(--dark); }
 .decision-step-title { font-family: var(--display); font-size: 1rem; color: #fff; flex: 1; }
-.decision-step-arrow {
-  width: 20px; height: 20px; transition: transform 0.3s ease; color: rgba(255,247,241,0.4);
-}
-.decision-step.open .decision-step-arrow { transform: rotate(180deg); color: var(--gold); }
+.decision-step-arrow { display: none; }
 .decision-step-body {
-  max-height: 0; overflow: hidden; transition: max-height 0.5s ease, padding 0.3s ease;
-  padding: 0 22px; color: rgba(255,247,241,0.7); font-size: 0.95rem; line-height: 1.6;
+  padding: 0 22px 16px; color: rgba(255,247,241,0.7); font-size: 0.95rem; line-height: 1.6;
 }
-.decision-step.open .decision-step-body { max-height: 200px; padding: 0 22px 18px; }
 
 .cta-links {
   display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 20px;
@@ -360,8 +379,7 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
   background: rgba(255,255,255,0.14); transform: translateY(-3px) scale(1.03);
   box-shadow: 0 8px 24px rgba(0,0,0,0.2);
 }
-.cta-hidden { opacity: 0; max-height: 0; overflow: hidden; transition: opacity 0.6s ease, max-height 0.5s ease; pointer-events: none; }
-.cta-hidden.cta-visible { opacity: 1; max-height: 200px; pointer-events: auto; }
+.cta-hidden { opacity: 1; max-height: 200px; pointer-events: auto; }
 
 /* PORTRAIT WARNING */
 #portrait-warning {
@@ -896,10 +914,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
 
     <div class="decision-accordion" data-reveal="up" data-delay="260">
       <div class="decision-step" id="step1">
-        <div class="decision-step-header" onclick="toggleStep('step1')">
+        <div class="decision-step-header">
           <span class="decision-step-num">1</span>
           <span class="decision-step-title">Pick your ad size and term</span>
-          <svg class="decision-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+
         </div>
         <div class="decision-step-body">
           1/4, 1/2, full page, or back cover — paired with a 12, 24, or 36-month commitment. Longer terms unlock lower monthly rates and feature story bonuses. We'll find the fit that makes sense for your goals and budget.
@@ -907,10 +925,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
       </div>
 
       <div class="decision-step" id="step2">
-        <div class="decision-step-header" onclick="toggleStep('step2')">
+        <div class="decision-step-header">
           <span class="decision-step-num">2</span>
           <span class="decision-step-title">Confirm billing details</span>
-          <svg class="decision-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+
         </div>
         <div class="decision-step-body">
           We'll set up monthly invoicing through our portal — credit card, ACH, e-check, or invoice. Whatever works for your business. No upfront lump sum.
@@ -918,10 +936,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
       </div>
 
       <div class="decision-step" id="step3">
-        <div class="decision-step-header" onclick="toggleStep('step3')">
+        <div class="decision-step-header">
           <span class="decision-step-num">3</span>
           <span class="decision-step-title">Story angle + primary CTA</span>
-          <svg class="decision-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+
         </div>
         <div class="decision-step-body">
           What should families do when they see your ad? Call for a consultation? Visit your website? We'll design the ad around a clear call-to-action. If you're on a 24+ month term, we'll also plan your first feature story angle — maybe the accessibility side of flooring, or a project walkthrough.
@@ -929,10 +947,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
       </div>
 
       <div class="decision-step" id="step4">
-        <div class="decision-step-header" onclick="toggleStep('step4')">
+        <div class="decision-step-header">
           <span class="decision-step-num">4</span>
           <span class="decision-step-title">First issue + creative brief</span>
-          <svg class="decision-step-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="6 9 12 15 18 9"/></svg>
+
         </div>
         <div class="decision-step-body">
           We'll confirm your start date and kick off the creative brief. Our design team handles everything — you'll review a proof before it goes to print. Typical turnaround is 2 weeks from brief to proof.
