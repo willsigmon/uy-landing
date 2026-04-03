@@ -44,7 +44,8 @@ export default function Home() {
             icon="✨"
             label="Nominate a Story or Refer a Business"
             description="Shining Bright, Abilities in Action, Nonprofit Spotlight, and more"
-            href={URLS.nominate}
+            href="/refer"
+            featured
           />
         </LinkSection>
       </FadeIn>

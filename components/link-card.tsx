@@ -9,6 +9,7 @@ interface LinkCardProps {
   readonly href?: string;
   readonly onClick?: () => void;
   readonly comingSoon?: boolean;
+  readonly featured?: boolean;
 }
 
 export function LinkCard({
@@ -18,6 +19,7 @@ export function LinkCard({
   href,
   onClick,
   comingSoon = false,
+  featured = false,
 }: LinkCardProps) {
   const content = (
     <>
@@ -25,11 +27,11 @@ export function LinkCard({
         {icon}
       </span>
       <div className="flex flex-1 flex-col gap-0.5 text-left">
-        <span className="font-semibold leading-tight text-card-foreground">
+        <span className={`font-semibold leading-tight ${featured ? "text-primary-foreground" : "text-card-foreground"}`}>
           {label}
         </span>
         {description && (
-          <span className="text-sm text-muted-foreground">{description}</span>
+          <span className={`text-sm ${featured ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{description}</span>
         )}
       </div>
       {comingSoon ? (
@@ -38,7 +40,7 @@ export function LinkCard({
         </span>
       ) : (
         <svg
-          className="h-5 w-5 shrink-0 text-muted-foreground transition-transform group-hover:translate-x-0.5"
+          className={`h-5 w-5 shrink-0 transition-transform group-hover:translate-x-0.5 ${featured ? "text-primary-foreground/70" : "text-muted-foreground"}`}
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -55,18 +57,19 @@ export function LinkCard({
     </>
   );
 
-  const className =
-    "group flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 transition-all hover:border-foreground/30 hover:shadow-lg active:translate-y-0 hover-lift";
+  const baseClass = featured
+    ? "group flex items-center gap-4 rounded-2xl border-2 border-primary/30 bg-gradient-to-r from-primary to-[#e84e8a] p-4 transition-all hover:shadow-xl hover:scale-[1.02] active:scale-[0.99] animate-pulse-glow"
+    : "group flex items-center gap-4 rounded-2xl border-2 border-border bg-card p-4 transition-all hover:border-foreground/30 hover:shadow-lg active:translate-y-0 hover-lift";
 
   if (comingSoon) {
     return (
-      <div className={`${className} cursor-default opacity-70`}>{content}</div>
+      <div className={`${baseClass} cursor-default opacity-70`}>{content}</div>
     );
   }
 
   if (onClick) {
     return (
-      <button type="button" className={className} onClick={() => { tap(); onClick(); }}>
+      <button type="button" className={baseClass} onClick={() => { tap(); onClick(); }}>
         {content}
       </button>
     );
@@ -75,7 +78,7 @@ export function LinkCard({
   return (
     <a
       href={href}
-      className={className}
+      className={baseClass}
       target={href?.startsWith("http") ? "_blank" : undefined}
       rel={href?.startsWith("http") ? "noopener noreferrer" : undefined}
       onClick={() => tap()}
