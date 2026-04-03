@@ -765,10 +765,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
         <div class="pc-body">
           <div class="pc-desc">9" &times; 7.25" — premium placement, first thing seen when picked up</div>
           <div class="pc-terms">
-            <div class="pc-term">
-              <span class="pc-term-length">12 months</span>
-              <span class="pc-term-price">$795</span>
+            <div class="pc-term pc-term--popular">
+              <span class="pc-term-length">36 months</span>
+              <span class="pc-term-price">$595</span>
               <span class="pc-term-per">/ month</span>
+              <span class="pc-term-save">Save ~25%</span>
             </div>
             <div class="pc-term pc-term--story">
               <span class="pc-term-length">24 months</span>
@@ -776,11 +777,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
               <span class="pc-term-per">/ month</span>
               <span class="pc-term-save">Save ~13%</span>
             </div>
-            <div class="pc-term pc-term--popular">
-              <span class="pc-term-length">36 months</span>
-              <span class="pc-term-price">$595</span>
+            <div class="pc-term">
+              <span class="pc-term-length">12 months</span>
+              <span class="pc-term-price">$795</span>
               <span class="pc-term-per">/ month</span>
-              <span class="pc-term-save">Save ~25%</span>
             </div>
           </div>
         </div>
@@ -796,10 +796,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
         <div class="pc-body">
           <div class="pc-desc">8.75" &times; 11.5" — maximum impact, full bleed</div>
           <div class="pc-terms">
-            <div class="pc-term">
-              <span class="pc-term-length">12 months</span>
-              <span class="pc-term-price">$595</span>
+            <div class="pc-term pc-term--popular">
+              <span class="pc-term-length">36 months</span>
+              <span class="pc-term-price">$395</span>
               <span class="pc-term-per">/ month</span>
+              <span class="pc-term-save">Save ~34%</span>
             </div>
             <div class="pc-term pc-term--story">
               <span class="pc-term-length">24 months</span>
@@ -807,11 +808,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
               <span class="pc-term-per">/ month</span>
               <span class="pc-term-save">Save ~17%</span>
             </div>
-            <div class="pc-term pc-term--popular">
-              <span class="pc-term-length">36 months</span>
-              <span class="pc-term-price">$395</span>
+            <div class="pc-term">
+              <span class="pc-term-length">12 months</span>
+              <span class="pc-term-price">$595</span>
               <span class="pc-term-per">/ month</span>
-              <span class="pc-term-save">Save ~34%</span>
             </div>
           </div>
         </div>
@@ -827,10 +827,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
         <div class="pc-body">
           <div class="pc-desc">7.25" &times; 4.875" — dominant layout, hard to miss</div>
           <div class="pc-terms">
-            <div class="pc-term">
-              <span class="pc-term-length">12 months</span>
-              <span class="pc-term-price">$445</span>
+            <div class="pc-term pc-term--popular">
+              <span class="pc-term-length">36 months</span>
+              <span class="pc-term-price">$295</span>
               <span class="pc-term-per">/ month</span>
+              <span class="pc-term-save">Save ~34%</span>
             </div>
             <div class="pc-term pc-term--story">
               <span class="pc-term-length">24 months</span>
@@ -838,11 +839,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
               <span class="pc-term-per">/ month</span>
               <span class="pc-term-save">Save ~17%</span>
             </div>
-            <div class="pc-term pc-term--popular">
-              <span class="pc-term-length">36 months</span>
-              <span class="pc-term-price">$295</span>
+            <div class="pc-term">
+              <span class="pc-term-length">12 months</span>
+              <span class="pc-term-price">$445</span>
               <span class="pc-term-per">/ month</span>
-              <span class="pc-term-save">Save ~34%</span>
             </div>
           </div>
         </div>
@@ -858,10 +858,11 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
         <div class="pc-body">
           <div class="pc-desc">3.5" &times; 4.875" — strong presence on the page</div>
           <div class="pc-terms">
-            <div class="pc-term">
-              <span class="pc-term-length">12 months</span>
-              <span class="pc-term-price">$295</span>
+            <div class="pc-term pc-term--popular">
+              <span class="pc-term-length">36 months</span>
+              <span class="pc-term-price">$190</span>
               <span class="pc-term-per">/ month</span>
+              <span class="pc-term-save">Save ~36%</span>
             </div>
             <div class="pc-term pc-term--story">
               <span class="pc-term-length">24 months</span>
@@ -869,11 +870,10 @@ h1, h2, h3, h4 { font-family: var(--display); font-weight: 400; letter-spacing: 
               <span class="pc-term-per">/ month</span>
               <span class="pc-term-save">Save ~19%</span>
             </div>
-            <div class="pc-term pc-term--popular">
-              <span class="pc-term-length">36 months</span>
-              <span class="pc-term-price">$190</span>
+            <div class="pc-term">
+              <span class="pc-term-length">12 months</span>
+              <span class="pc-term-price">$295</span>
               <span class="pc-term-per">/ month</span>
-              <span class="pc-term-save">Save ~36%</span>
             </div>
           </div>
         </div>
