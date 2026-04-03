@@ -73,6 +73,36 @@
   --poster-panel-muted: rgba(48, 29, 84, 0.94);
 }
 
+/* System dark mode fallback — ensures iOS in-app browsers
+   (Comet, Safari Reader, etc.) get proper dark colors before
+   JS hydrates and adds the .dark class */
+@media (prefers-color-scheme: dark) {
+  html:not(.light-override) {
+    color-scheme: dark;
+  }
+  html:not(.light-override):not(.dark) {
+    --background: #140925;
+    --foreground: #fff4ea;
+    --card: #251345;
+    --card-foreground: #fff4ea;
+    --primary: #ff6b6b;
+    --primary-foreground: #fff7f1;
+    --secondary: #3b255f;
+    --secondary-foreground: #fff4ea;
+    --muted: #301d54;
+    --muted-foreground: #d9c7f0;
+    --accent: #12d6a0;
+    --accent-foreground: #082b21;
+    --border: #65488f;
+    --ring: #ffcc00;
+    --poster-shadow: rgba(9, 4, 18, 0.5);
+    --poster-shadow-strong: rgba(9, 4, 18, 0.82);
+    --poster-shell: rgba(31, 16, 56, 0.94);
+    --poster-panel: rgba(39, 20, 70, 0.96);
+    --poster-panel-muted: rgba(48, 29, 84, 0.94);
+  }
+}
+
 @layer base {
   * {
     @apply border-border;

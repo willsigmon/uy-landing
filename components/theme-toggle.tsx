@@ -11,12 +11,17 @@ export function ThemeToggle() {
     const isDark = stored === "dark" || (!stored && prefersDark);
     setDark(isDark);
     document.documentElement.classList.toggle("dark", isDark);
+    // Prevent CSS prefers-color-scheme fallback from overriding explicit light choice
+    if (stored === "light") {
+      document.documentElement.classList.add("light-override");
+    }
   }, []);
 
   function toggle() {
     const next = !dark;
     setDark(next);
     document.documentElement.classList.toggle("dark", next);
+    document.documentElement.classList.toggle("light-override", !next);
     localStorage.setItem("theme", next ? "dark" : "light");
   }
 
